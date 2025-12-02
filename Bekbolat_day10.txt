@@ -1,0 +1,5 @@
+git config --global user.name "balgynbeck"
+git config --global user.email "bek.balgynbeks@gmail.com"
+git add .
+git commit -m "Created HTML and JavaScript files"
+git push

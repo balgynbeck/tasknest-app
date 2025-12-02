@@ -3,3 +3,6 @@ git config --global user.email "bek.balgynbeks@gmail.com"
 git add .
 git commit -m "Created HTML and JavaScript files"
 git push
+git add Bekbolat_day10.txt
+git commit -m "Created txt with commands"
+git push

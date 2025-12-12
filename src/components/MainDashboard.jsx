@@ -1,20 +1,25 @@
-function MainDashboard() {
+import styles from "./style.css";
+
+function MainDashboard({ tasks }) {
   return (
-    <main style={{ padding: "16px" }}>
+    <main className={styles.container}>
       <h2>Главная панель</h2>
-      <p>Здесь будет список задач и статистика.</p>
-      <div
-        style={{
-          marginTop: "16px",
-          padding: "16px",
-          border: "1px solid #ddd",
-          borderRadius: "8px",
-          backgroundColor: "#ffffff",
-        }}
-      >
-        <h3>Пример блока</h3>
-        <p>Это заглушка для структуры страницы.</p>
-      </div>
+
+      <h3>Список задач</h3>
+
+      {tasks.map((task) => (
+        <div key={task.id} className={styles.taskItem}>
+          <p>
+            <b>ID:</b> {task.id}
+          </p>
+          <p>
+            <b>Задача:</b> {task.title}
+          </p>
+          <p>
+            <b>Статус:</b> {task.completed ? "Выполнено" : "В процессе"}
+          </p>
+        </div>
+      ))}
     </main>
   );
 }
